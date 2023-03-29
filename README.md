@@ -1,1 +1,1 @@
-# MMM
+# MMM - marketing budget optimization
