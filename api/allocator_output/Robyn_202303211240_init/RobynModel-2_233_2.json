@@ -1,0 +1,218 @@
+{
+  "InputCollect": {
+    "date_var": ["DATE"],
+    "dayInterval": [7],
+    "intervalType": ["week"],
+    "dep_var": ["revenue"],
+    "dep_var_type": ["revenue"],
+    "prophet_vars": ["trend", "season", "holiday"],
+    "prophet_signs": ["default", "default", "default"],
+    "prophet_country": ["DE"],
+    "context_vars": ["competitor_sales_B", "events"],
+    "context_signs": ["default", "default"],
+    "paid_media_vars": ["tv_S", "ooh_S", "print_S", "facebook_I", "search_clicks_P"],
+    "paid_media_signs": ["positive", "positive", "positive", "positive", "positive"],
+    "paid_media_spends": ["tv_S", "ooh_S", "print_S", "facebook_S", "search_S"],
+    "mediaVarCount": [5],
+    "exposure_vars": ["facebook_I", "search_clicks_P"],
+    "organic_vars": ["newsletter"],
+    "organic_signs": ["positive"],
+    "all_media": ["tv_S", "ooh_S", "print_S", "facebook_S", "search_S", "newsletter"],
+    "all_ind_vars": ["trend", "season", "holiday", "competitor_sales_B", "events", "tv_S", "ooh_S", "print_S", "facebook_S", "search_S", "newsletter"],
+    "factor_vars": ["events"],
+    "unused_vars": [],
+    "window_start": ["2016-01-04"],
+    "rollingWindowStartWhich": [7],
+    "window_end": ["2018-12-31"],
+    "rollingWindowEndWhich": [163],
+    "rollingWindowLength": [157],
+    "refreshAddedStart": ["2016-01-04"],
+    "adstock": ["geometric"],
+    "hyperparameters": {
+      "facebook_S_alphas": [0.5, 3],
+      "facebook_S_gammas": [0.3, 1],
+      "facebook_S_thetas": [0, 0.3],
+      "print_S_alphas": [0.5, 3],
+      "print_S_gammas": [0.3, 1],
+      "print_S_thetas": [0.1, 0.4],
+      "tv_S_alphas": [0.5, 3],
+      "tv_S_gammas": [0.3, 1],
+      "tv_S_thetas": [0.3, 0.8],
+      "search_S_alphas": [0.5, 3],
+      "search_S_gammas": [0.3, 1],
+      "search_S_thetas": [0, 0.3],
+      "ooh_S_alphas": [0.5, 3],
+      "ooh_S_gammas": [0.3, 1],
+      "ooh_S_thetas": [0.1, 0.4],
+      "newsletter_alphas": [0.5, 3],
+      "newsletter_gammas": [0.3, 1],
+      "newsletter_thetas": [0.1, 0.4],
+      "train_size": [0.5, 0.8]
+    },
+    "calibration_input": {},
+    "custom_params": [],
+    "version": ["Robyn (stable) v3.9.0 [R-4.2.2]"]
+  },
+  "ExportedModel": {
+    "select_model": ["2_233_2"],
+    "ts_validation": [false],
+    "summary": [
+      {
+        "variable": "(Intercept)",
+        "coef": 435802.7989,
+        "decompPer": 0.2372,
+        "decompAgg": 68421039.4322
+      },
+      {
+        "variable": "trend",
+        "coef": 0.171,
+        "decompPer": 0.1658,
+        "decompAgg": 47834601.9433
+      },
+      {
+        "variable": "season",
+        "coef": 0.3383,
+        "decompPer": 0.0004,
+        "decompAgg": 123852.58
+      },
+      {
+        "variable": "holiday",
+        "coef": 0.8561,
+        "decompPer": 0.0207,
+        "decompAgg": 5958074.4952
+      },
+      {
+        "variable": "competitor_sales_B",
+        "coef": 0.162,
+        "decompPer": 0.4891,
+        "decompAgg": 141104628.8867
+      },
+      {
+        "variable": "events",
+        "coef": 0,
+        "decompPer": 0,
+        "decompAgg": 0
+      },
+      {
+        "variable": "tv_S",
+        "coef": 614038.8758,
+        "decompPer": 0.0221,
+        "decompAgg": 6363408.5537,
+        "performance": 0.3274,
+        "mean_response": 8271.1007,
+        "mean_spend": 290083.4493
+      },
+      {
+        "variable": "ooh_S",
+        "coef": 201182.5014,
+        "decompPer": 0.0181,
+        "decompAgg": 5210080.5506,
+        "performance": 0.3372,
+        "mean_response": 52758.451,
+        "mean_spend": 230588.4478
+      },
+      {
+        "variable": "print_S",
+        "coef": 45438.0214,
+        "decompPer": 0.0038,
+        "decompAgg": 1094480.6475,
+        "performance": 0.2426,
+        "mean_response": 17964.4169,
+        "mean_spend": 70504.099
+      },
+      {
+        "variable": "facebook_S",
+        "coef": 103468.2137,
+        "decompPer": 0.0125,
+        "decompAgg": 3592419.0986,
+        "performance": 0.3584,
+        "mean_response": 37492.074,
+        "mean_spend": 128491.5469
+      },
+      {
+        "variable": "search_S",
+        "coef": 40481.3929,
+        "decompPer": 0.0069,
+        "decompAgg": 1991874.0259,
+        "performance": 0.3279,
+        "mean_response": 13876.1581,
+        "mean_spend": 45674.4361
+      },
+      {
+        "variable": "newsletter",
+        "coef": 489231.2439,
+        "decompPer": 0.0235,
+        "decompAgg": 6777865.516
+      }
+    ],
+    "errors": [
+      {
+        "rsq_train": 0.9239,
+        "rsq_val": 0.8787,
+        "rsq_test": 0.8668,
+        "nrmse_train": 0.0578,
+        "nrmse_val": 0.4425,
+        "nrmse_test": 0.6264,
+        "nrmse": 0.0578,
+        "decomp.rssd": 0.0278,
+        "mape": 0
+      }
+    ],
+    "hyper_values": {
+      "facebook_S_alphas": [1.3951],
+      "facebook_S_gammas": [0.4399],
+      "facebook_S_thetas": [0.2816],
+      "lambda": [68088.024],
+      "newsletter_alphas": [2.2054],
+      "newsletter_gammas": [0.9048],
+      "newsletter_thetas": [0.1188],
+      "ooh_S_alphas": [0.8234],
+      "ooh_S_gammas": [0.8582],
+      "ooh_S_thetas": [0.3409],
+      "print_S_alphas": [2.9881],
+      "print_S_gammas": [0.387],
+      "print_S_thetas": [0.1246],
+      "search_S_alphas": [0.6563],
+      "search_S_gammas": [0.7761],
+      "search_S_thetas": [0.2045],
+      "train_size": [0.5484],
+      "tv_S_alphas": [2.7957],
+      "tv_S_gammas": [0.8974],
+      "tv_S_thetas": [0.6684]
+    },
+    "hyper_updated": {
+      "facebook_S_alphas": [1.3951],
+      "facebook_S_gammas": [0.4399],
+      "facebook_S_thetas": [0.2816],
+      "newsletter_alphas": [2.2054],
+      "newsletter_gammas": [0.9048],
+      "newsletter_thetas": [0.1188],
+      "ooh_S_alphas": [0.8234],
+      "ooh_S_gammas": [0.8582],
+      "ooh_S_thetas": [0.3409],
+      "print_S_alphas": [2.9881],
+      "print_S_gammas": [0.387],
+      "print_S_thetas": [0.1246],
+      "search_S_alphas": [0.6563],
+      "search_S_gammas": [0.7761],
+      "search_S_thetas": [0.2045],
+      "tv_S_alphas": [2.7957],
+      "tv_S_gammas": [0.8974],
+      "tv_S_thetas": [0.6684],
+      "lambda": [68088.024],
+      "train_size": [0.5484]
+    },
+    "calibration_constraint": [0.1],
+    "cores": [7],
+    "iterations": [1],
+    "trials": [1],
+    "intercept_sign": ["non_negative"],
+    "nevergrad_algo": ["TwoPointsDE"],
+    "add_penalty_factor": [false],
+    "seed": [123],
+    "pareto_fronts": [1],
+    "hyper_fixed": [true],
+    "plot_folder": ["C:/Users/HARUN/Documents/Robyn_202303211240_init/"],
+    "selectID": ["2_233_2"]
+  }
+}
